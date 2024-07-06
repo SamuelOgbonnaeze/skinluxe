@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ProductCard } from "./product-card";
 
 const products = [1, 2, 3, 4];
@@ -32,6 +33,12 @@ const NewSection = () => {
                     ))}
                 </div>
             </div>
+            {/* See more link */}
+            <Link href="/">
+                <div className="flex items-center justify-end mt-5 w-full">
+                    <p className="text-[#720439] text-[20px] leading-[36px] font-openSans font-semibold ">See more from this category</p>
+                </div>
+            </Link>
         </div>
     );
 }
