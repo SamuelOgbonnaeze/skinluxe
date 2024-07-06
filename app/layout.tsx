@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Josefin_Sans, Oldenburg, Open_Sans } from "next/font/google";
+import { Inter, Josefin_Sans, Oldenburg, Open_Sans, Outfit } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
 
@@ -8,18 +8,22 @@ const inter = Inter({
   variable: '--font-inter'
 });
 
-const openSans= Open_Sans({
+const openSans = Open_Sans({
   subsets: ["latin"],
   variable: '--font-openSans'
 })
-const oldenburg= Oldenburg({
+const oldenburg = Oldenburg({
   subsets: ["latin"],
   variable: '--font-oldenburg',
   weight: "400"
 })
-const josefin= Josefin_Sans({
+const josefin = Josefin_Sans({
   subsets: ["latin"],
   variable: '--font-josefin'
+})
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: '--font-outfit'
 })
 
 
@@ -36,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${openSans.variable} ${oldenburg.variable} ${josefin.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${openSans.variable} ${oldenburg.variable} ${josefin.variable} ${outfit.variable}`}>{children}</body>
       <Footer />
     </html>
   );
