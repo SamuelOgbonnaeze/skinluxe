@@ -31,7 +31,7 @@ export const ProductCard = () => {
             <hr className="border-[0.5px] border-[#D1D1D4] " />
             {/* Review */}
             <div className="flex items-center justify-between">
-                <div className="flex flex-col items-center gap-y-3 ml-[17px]">
+                <div className="flex flex-col items-center gap-y-2 ml-[17px]">
                     <p className="font-openSans w-full font-semibold text-[10px] text-[#88898F] text-left leading-[14px] ">Supplied by: <span className="font-normal">Jenny&apos;s Glow</span></p>
                     <div className="flex items-center gap-x-1">
                         <Image
