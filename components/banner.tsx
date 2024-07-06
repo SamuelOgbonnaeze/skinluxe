@@ -22,7 +22,7 @@ const Banner = () => {
       />
 
       {/* Text content */}
-      <div className="relative z-20 flex items-center ml-[75px]  w-full h-full text-center">
+      <div className="relative z-20 flex items-center ml-[75px]  w-full h-full text-left">
         <div className="text-white w-[591px] h-[715px] ">
           {/* Add any text content here */}
           <p className="font-bold font-outfit text-8xl leading-[143px] h-full ">PRESERVE YOUR GLOW, EMBRACE YOUR HUE</p>

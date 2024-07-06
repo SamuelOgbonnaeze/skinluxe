@@ -1,3 +1,7 @@
+import { ProductCard } from "./product-card";
+
+const products = [1, 2, 3, 4];
+
 const NewSection = () => {
     return (
         <div className="px-[75px] mb-[85px]">
@@ -18,8 +22,15 @@ const NewSection = () => {
                 <div className="bg-[#FEF8FE]  ">
                     <p className="px-5 py-3 text-[20px] leading-[30px] font-semibold">Mosturizer</p>
                 </div>
-                
+            </div>
 
+            {/* Cards */}
+            <div className="px-[73px] mt-[20px] ">
+                <div className="grid grid-cols-4 gap-8">
+                    {products.map((product, index) => (
+                        <ProductCard key={index} />
+                    ))}
+                </div>
             </div>
         </div>
     );
