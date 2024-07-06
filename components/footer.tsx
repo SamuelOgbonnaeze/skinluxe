@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Checkbox } from "./ui/checkbox";
-import { Instagram } from "lucide-react";
+
 
 const Footer = () => {
     return (
-        <div className=" w-full">
+        <div className=" w-full font-openSans">
             <div className="w-full  ">
 
                 {/* Upper layer */}

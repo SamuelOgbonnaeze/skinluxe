@@ -1,9 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Josefin_Sans, Oldenburg, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: '--font-inter'
+});
+
+const openSans= Open_Sans({
+  subsets: ["latin"],
+  variable: '--font-openSans'
+})
+const oldenburg= Oldenburg({
+  subsets: ["latin"],
+  variable: '--font-oldenburg',
+  weight: "400"
+})
+const josefin= Josefin_Sans({
+  subsets: ["latin"],
+  variable: '--font-josefin'
+})
 
 export const metadata: Metadata = {
   title: "Skinluxe",
@@ -17,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.variable} ${openSans.variable} ${oldenburg.variable} ${josefin.variable}`}>{children}</body>
       <Footer />
     </html>
   );
