@@ -1,8 +1,10 @@
 import Banner from "@/components/banner";
+import BestSellers from "@/components/best-sellers";
 import CeoFeedback from "@/components/ceofeedback";
 import ClientFeedback from "@/components/client-feedback";
 import Consult from "@/components/consult";
 import NewSection from "@/components/new-section";
+import Overview from "@/components/overview";
 
 
 
@@ -10,6 +12,8 @@ export default function Home() {
   return (
     <>
       Hello world
+      <Overview />
+      <BestSellers />
       <Consult />
       <NewSection />
       <Banner />

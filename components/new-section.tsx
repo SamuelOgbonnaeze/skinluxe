@@ -7,7 +7,7 @@ const NewSection = () => {
     return (
         <div className="px-[75px] mb-[85px]">
             <div>
-                <p className="font-oldenburg text-4xl ">New In</p>
+                <p className="font-oldenburg text-4xl font-normal leading-[50px]  ">New In</p>
             </div>
             <div className="flex items-center justify-end mt-2 w-full">
 
@@ -26,7 +26,7 @@ const NewSection = () => {
             </div>
 
             {/* Cards */}
-            <div className="px-[73px] mt-[20px] ">
+            <div className=" mt-[20px] ">
                 <div className="grid grid-cols-4 gap-8">
                     {products.map((product, index) => (
                         <ProductCard key={index} />
