@@ -33,20 +33,24 @@ export const ProductCard = () => {
             <div className="flex items-center justify-between">
                 <div className="flex flex-col items-center gap-y-3 ml-[17px]">
                     <p className="font-openSans w-full font-semibold text-[10px] text-[#88898F] text-left leading-[14px] ">Supplied by: <span className="font-normal">Jenny&apos;s Glow</span></p>
-                    <Image
-                        src="/review_img.png "
-                        alt=""
-                        width={142}
-                        height={142}
-                    />
+                    <div className="flex items-center gap-x-1">
+                        <Image
+                            src="/review-frame.png "
+                            alt=""
+                            width={92}
+                            height={16}
+                        />
+                        <p className="text-[#9B9CA1] font-openSans font-normal text-[10px] leading-[13px] ">4 Reviews</p>
+                    </div>
                 </div>
-                <div className=" flex items-center mt-2 mr-3">
+                <div className=" flex items-center  mt-2 mr-3">
                     <Image
                         src="/cart-icon.png"
                         alt=""
                         width={34}
                         height={34}
                     />
+
                 </div>
             </div>
 
