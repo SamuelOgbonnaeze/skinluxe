@@ -13,6 +13,7 @@ const CeoFeedback = () => {
                     alt="Ceo image"
                     width={496}
                     height={415}
+                    className="object-cover"
                     />
                 </div>
                 <div className="flex flex-col  w-[650px]">
