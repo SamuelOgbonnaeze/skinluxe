@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { HiOutlineShoppingCart } from "react-icons/hi2";
 
 export const ProductCard = () => {
     return (
@@ -45,14 +46,14 @@ export const ProductCard = () => {
                     </div>
                 </div>
                 <Link href="/cart">
-                    <div className=" flex items-center  mt-2 mr-3">
-                        <Image
+                    <div className=" flex items-center justify-center mt-2 mr-3 ">
+                        {/* <Image
                             src="/cart-icon.png"
                             alt=""
                             width={34}
                             height={34}
-                        />
-
+                        /> */}
+                        <HiOutlineShoppingCart className="w-[34px] h-[34px] p-2  border rounded-full bg-gray-500 text-white hover:bg-[#3D021E] " />
                     </div>
                 </Link>
             </div>
