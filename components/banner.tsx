@@ -17,8 +17,7 @@ const Banner = () => {
         src="/Rec_11.png"
         alt="Overlay"
         layout="fill"
-        objectFit="cover"
-        className="absolute inset-0 z-10"
+        className="absolute object-cover inset-0 z-10"
       />
 
       {/* Text content */}

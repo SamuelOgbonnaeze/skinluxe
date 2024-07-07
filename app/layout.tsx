@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Josefin_Sans, Oldenburg, Open_Sans, Outfit } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,8 +41,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body className={`${inter.variable} ${openSans.variable} ${oldenburg.variable} ${josefin.variable} ${outfit.variable}`}>{children}</body>
-      <Footer />
+      
     </html>
   );
 }
