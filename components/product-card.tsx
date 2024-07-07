@@ -35,7 +35,7 @@ export const ProductCard = () => {
                     <p className="font-openSans w-full font-semibold text-[10px] text-[#88898F] text-left leading-[14px] ">Supplied by: <span className="font-normal">Jenny&apos;s Glow</span></p>
                     <div className="flex items-center gap-x-1">
                         <Image
-                            src="/review-frame.png "
+                            src="/reviews.png "
                             alt=""
                             width={92}
                             height={16}
