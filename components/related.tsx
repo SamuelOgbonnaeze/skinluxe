@@ -5,7 +5,7 @@ const products = [1, 2, 3, 4];
 
 const Related = () => {
     return (
-        <div  className="px-[73px] mb-[185px]">
+        <div  className="px-[73px] mt-[115px] mb-[185px]">
             <div>
                 <p className="font-oldenburg text-4xl font-normal leading-[50px]  ">Related to this product</p>
             </div>
