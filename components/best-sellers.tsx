@@ -5,14 +5,9 @@ const products = [1, 2, 3, 4, 5, 6, 7, 8];
 
 const BestSellers = () => {
     return (
-        <div className="px-[75px] mt-[77px] mb-[85px]">
-            <div className="flex items-center justify-between mt-2 w-full">
-                <p className="font-oldenburg font-normal text-4xl leading-[50px] ">Our Best Sellers</p>
-                <div>
-                    <Link href="/">
-                        <p className="font-openSans font-semibold text-[20px] text-[#9C3D6B] leading-[28px] ">See all</p>
-                    </Link>
-                </div>
+        <div id="bodyoil" className="px-[75px] mt-[77px] mb-[85px]">
+            <div className="flex items-center mt-2 w-full">
+                <p className="font-oldenburg font-normal text-4xl leading-[50px] ">Body Oil</p>
             </div>
 
 

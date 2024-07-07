@@ -3,11 +3,11 @@ import { ProductCard } from "./product-card";
 
 const products = [1, 2, 3, 4];
 
-const NewSection = () => {
+const Related = () => {
     return (
-        <div id="natural" className="px-[75px] mb-[85px]">
+        <div  className="px-[73px] mb-[185px]">
             <div>
-                <p className="font-oldenburg text-4xl font-normal leading-[50px]  ">Natural</p>
+                <p className="font-oldenburg text-4xl font-normal leading-[50px]  ">Related to this product</p>
             </div>
 
             {/* Cards */}
@@ -23,4 +23,4 @@ const NewSection = () => {
     );
 }
 
-export default NewSection;
+export default Related;

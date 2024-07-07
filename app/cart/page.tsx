@@ -6,24 +6,15 @@ import ClientFeedback from "@/components/client-feedback";
 import Consult from "@/components/consult";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import NewSection from "@/components/new-section";
-import Overview from "@/components/overview";
+import Related from "@/components/related";
 
 
 
-export default function Home() {
+export default function Cart() {
   return (
     <>
       <Navbar />
-      <Carousel />
-      <Overview />
-      <BestSellers />
-      <Consult />
-      <NewSection />
-      <Banner />
-      <NewSection />
-      <CeoFeedback />
-      <ClientFeedback />
+     <Related />
       <Footer />
     </>
   );

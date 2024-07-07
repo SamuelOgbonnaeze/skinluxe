@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
     return (
@@ -6,21 +7,33 @@ const Navbar = () => {
             <div className="w-full flex items-center justify-between ">
 
                 {/*  */}
-                <div className="" >
-                    <Image
-                        src="/logo.png"
-                        alt=""
-                        width={120}
-                        height={59}
-                    />
-                </div>
+                <Link href="/">
+                    <div className="" >
+                        <Image
+                            src="/logo.png"
+                            alt=""
+                            width={120}
+                            height={59}
+                        />
+                    </div>
+                </Link>
                 {/*  */}
                 <div className=" flex items-center gap-x-[40px] ">
-                    <p className="font-openSans font-bold text-[16px] leading-[22px] ">Women Skincare</p>
-                    <p className="font-openSans font-bold text-[16px] leading-[22px] ">Men Skincare</p>
-                    <p className="font-openSans font-bold text-[16px] leading-[22px] ">Blog</p>
-                    <p className="font-openSans font-bold text-[16px] leading-[22px] ">Contact Us</p>
-                    <p className="font-openSans font-bold text-[16px] leading-[22px] ">Our Brand</p>
+                    <Link href="#natural">
+                        <p className="font-openSans font-bold text-[16px] leading-[22px] ">Natural</p>
+                    </Link>
+                    <Link href="#bodyoil">
+                        <p className="font-openSans font-bold text-[16px] leading-[22px] ">Body Oil</p>
+                    </Link>
+                    <Link href="#moisturizer">
+                        <p className="font-openSans font-bold text-[16px] leading-[22px] ">Moisturizer</p>
+                    </Link>
+                    <Link href="#consult">
+                        <p className="font-openSans font-bold text-[16px] leading-[22px] ">Consultation</p>
+                    </Link>
+                    <Link href="#about">
+                        <p className="font-openSans font-bold text-[16px] leading-[22px] ">About us</p>
+                    </Link>
                 </div>
                 {/*  */}
                 <div className="flex items-center gap-x-4 ">
@@ -33,32 +46,17 @@ const Navbar = () => {
                             className=""
                         />
                     </div>
-                    <div className="flex items-center justify-between gap-x-1">
-                        <Image
-                            src="/Ellipse_17.png"
-                            alt=""
-                            width={35}
-                            height={35}
-                            className=""
-                        />
-                        <p className="font-openSans font-semibold text-[14px] leading-[24px] ">DesignKid</p>
-                        <Image
-                            src="/arrow_left.png"
-                            alt=""
-                            width={24}
-                            height={24}
-                            className=""
-                        />
-                    </div>
-                    <div className="">
-                        <Image
-                            src="/shopping_cart.png"
-                            alt=""
-                            width={24}
-                            height={24}
-                            className=""
-                        />
-                    </div>
+                    <Link href="/cart">
+                        <div className="">
+                            <Image
+                                src="/shopping_cart.png"
+                                alt=""
+                                width={24}
+                                height={24}
+                                className=""
+                            />
+                        </div>
+                    </Link>
                     <div className="flex items-center justify-between gap-x-1">
                         <Image
                             src="/language.png"

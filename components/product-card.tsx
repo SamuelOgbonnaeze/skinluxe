@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export const ProductCard = () => {
     return (
@@ -43,15 +44,17 @@ export const ProductCard = () => {
                         <p className="text-[#9B9CA1] font-openSans font-normal text-[10px] leading-[13px] ">4 Reviews</p>
                     </div>
                 </div>
-                <div className=" flex items-center  mt-2 mr-3">
-                    <Image
-                        src="/cart-icon.png"
-                        alt=""
-                        width={34}
-                        height={34}
-                    />
+                <Link href="/cart">
+                    <div className=" flex items-center  mt-2 mr-3">
+                        <Image
+                            src="/cart-icon.png"
+                            alt=""
+                            width={34}
+                            height={34}
+                        />
 
-                </div>
+                    </div>
+                </Link>
             </div>
 
         </div>

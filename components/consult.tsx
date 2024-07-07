@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Consult = () => {
     return (
-        <div className="my-[110px] px-[72px] h-[285px]">
+        <div id="consult" className="my-[110px] px-[72px] h-[285px]">
             <div className="flex h-full w-full items-center justify-center">
                 {/* Left Section */}
                 <div className="bg-[#720439] w-full h-full flex flex-col gap-y-2 px-[62px] text-white pb-[33px]">
