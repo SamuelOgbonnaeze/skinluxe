@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { HiOutlineShoppingCart } from "react-icons/hi2";
+import Star from "./star";
 
 export const ProductCard = () => {
     return (
@@ -36,12 +37,13 @@ export const ProductCard = () => {
                 <div className="flex flex-col items-center gap-y-2 ml-[17px]">
                     <p className="font-openSans w-full font-semibold text-[10px] text-[#88898F] text-left leading-[14px] ">Supplied by: <span className="font-normal">Jenny&apos;s Glow</span></p>
                     <div className="flex items-center gap-x-1">
-                        <Image
+                        {/* <Image
                             src="/reviews.png "
                             alt=""
                             width={92}
                             height={16}
-                        />
+                        /> */}
+                        <Star />
                         <p className="text-[#9B9CA1] font-openSans font-normal text-[10px] leading-[13px] ">4 Reviews</p>
                     </div>
                 </div>
