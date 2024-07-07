@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-[733px] mb-[102px]">
+    <div className="relative w-full h-[733px] mb-[102px] overflow-x-hidden">
       {/* Background image */}
       <Image
         src="/banner_img.png"
