@@ -8,20 +8,20 @@ import Link from "next/link";
 
 const CartItems = () => {
     return (
-        <div className="px-[75px] mt-[36px] ">
+        <div className="px-[23px] lg:px-[75px] mt-[36px] ">
             {/* home to cart */}
-            <div className="w-[100px] flex items-center justify-between py-2">
+            <div className="w-[100px] hidden lg:flex items-center justify-between py-2">
                 <Link href="/">
                     <p className="text-[#606060] text-[16px] font-normal font-openSans leading-[28px] ">Home</p>
                 </Link>
                 <MdKeyboardArrowRight className="w-[16px] h-[16px] " />
                 <Link href="/cart">
-                <p className="text-[#606060] text-[16px] font-bold font-openSans leading-[22px] ">Cart</p>
+                    <p className="text-[#606060] text-[16px] font-bold font-openSans leading-[22px] ">Cart</p>
                 </Link>
             </div>
             {/* select all */}
-            <div className=" w-[808px] mt-[26px] ">
-                <div className="flex items-center justify-between py-[29px] px-[37px] ">
+            <div className="hidden lg:flex items-center justify-between w-[808px] mt-[26px] ">
+                <div className="hidden md:flex items-center justify-between py-[29px] px-[37px] ">
                     <div className="flex items-center gap-x-2 ">
                         <Checkbox className="border-[#B4B4B4] " />
                         <p className="font-openSans font-semibold text-[18px] text-[#B4B4B4] leading-[25px]">Select All Four Items</p>
@@ -35,64 +35,64 @@ const CartItems = () => {
             </div>
             {/* items */}
 
-            <div>
-                <div className="grid grid-cols-3">
-                    <div className="col-span-2">
-                        <div className="w-full flex flex-col gap-y-[36px]">
-                            <div className="flex items-center gap-x-[10px]">
+            <div className="px-4 md:px-8 lg:px-12">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div className="col-span-1 lg:col-span-2">
+                        <div className="w-full flex flex-col gap-y-6">
+                            <div className="flex items-center gap-x-2 md:gap-x-4">
                                 <Checkbox className="border-black" />
                                 <CartItemCard />
                             </div>
-                            <div className="flex items-center gap-x-[10px]">
+                            <div className="flex items-center gap-x-2 md:gap-x-4">
                                 <Checkbox className="border-black" />
                                 <CartItemCard />
                             </div>
-                            <div className="flex items-center gap-x-[10px]">
+                            <div className="flex items-center gap-x-2 md:gap-x-4">
                                 <Checkbox className="border-black" />
                                 <CartItemCard />
                             </div>
-                            <div className="flex items-center gap-x-[10px]">
+                            <div className="flex items-center gap-x-2 md:gap-x-4">
                                 <Checkbox className="border-black" />
                                 <CartItemCard />
                             </div>
                         </div>
                     </div>
-                    <div>
-
-                        <div className="flex flex-col justify-start col-span-1 border-l-[3px] text-black font-openSans border-[#B4B4B470]/45  pl-[50px] ">
-                            <p className=" font-openSans font-bold text-[28px] leading-[39px] ">Order Summary</p>
-                            <div className="mt-[24px] flex flex-col gap-y-[12px]">
-                                <div className="w-full flex justify-between font-openSans text-[20px] leading-[28px]" >
-                                    <p className="  ">Sub Total (4 Items)</p>
-                                    <p className="font-semibold text-[#868686] ">N 211,440</p>
+                    <div className="col-span-1 border-t md:border-t-0 md:border-l-2 border-[#B4B4B470] mt-6 lg:mt-0">
+                        <div className="flex flex-col justify-start pl-4 md:pl-12 text-black font-openSans">
+                            <p className="font-openSans font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[39px]">Order Summary</p>
+                            <div className="mt-4 md:mt-6 flex flex-col gap-y-3 md:gap-y-4">
+                                <div className="w-full flex justify-between font-openSans text-[16px] md:text-[20px] leading-[22px] md:leading-[28px]">
+                                    <p>Sub Total (4 Items)</p>
+                                    <p className="font-semibold text-[#868686]">N 211,440</p>
                                 </div>
-                                <div className="w-full flex justify-between font-openSans text-[20px] leading-[28px]" >
-                                    <p className="  ">Shipping Fee</p>
-                                    <p className="font-semibold text-[#868686] ">N 11,300</p>
+                                <div className="w-full flex justify-between font-openSans text-[16px] md:text-[20px] leading-[22px] md:leading-[28px]">
+                                    <p>Shipping Fee</p>
+                                    <p className="font-semibold text-[#868686]">N 11,300</p>
                                 </div>
                             </div>
-                            <div className="mt-[30px]">
-                                <p className="text-[20px] leading-[28px] text-[#5D5D5D] font-semibold ">Enter Code</p>
-                                <div className="w-full flex">
-                                    <Input className="rounded-none font-semibold text-[18px] text-[#B4B4B4]/70 leading-[25px] " placeholder="Coupon Code" />
-                                    <button className="w-[84px] flex items-center justify-center bg-[#D3B1C2] ">
-                                        <Search className="w-[24px] h-[24px] text-white " />
+                            <div className="mt-6 md:mt-8">
+                                <p className="text-[16px] md:text-[20px] leading-[22px] md:leading-[28px] text-[#5D5D5D] font-semibold">Enter Code</p>
+                                <div className="w-full flex mt-2">
+                                    <input className="w-full px-2 py-2 border border-gray-300 rounded-none font-semibold text-[16px] md:text-[18px] text-[#B4B4B4]/70 leading-[22px] md:leading-[25px]" placeholder="Coupon Code" />
+                                    <button className="w-[60px] md:w-[84px] flex items-center justify-center bg-[#D3B1C2]">
+                                        <Search className="w-[20px] md:w-[24px] h-[20px] md:h-[24px] text-white" />
                                     </button>
                                 </div>
-                                <div className="w-full mt-[12px] flex justify-between font-openSans text-[20px] leading-[28px]" >
-                                    <p className=" font-semibold text-[16px] leading-[22px] ">Total after discount</p>
-                                    <p className="font-bold ">N 227,440</p>
+                                <div className="w-full mt-3 md:mt-4 flex justify-between font-openSans text-[16px] md:text-[20px] leading-[22px] md:leading-[28px]">
+                                    <p className="font-semibold">Total after discount</p>
+                                    <p className="font-bold">N 227,440</p>
                                 </div>
                             </div>
                             <Link href="/checkout">
-                                <div className="w-full mt-[18px] flex items-center justify-center bg-[#720439] text-white p-[10px] ">
-                                    <p className="font-semibold text-[16px] leading-[22px] ">Proceed to checkout</p>
+                                <div className="w-full mt-4 md:mt-6 flex items-center justify-center bg-[#720439] text-white py-2 md:py-3">
+                                    <p className="font-semibold text-[16px] leading-[22px]">Proceed to checkout</p>
                                 </div>
                             </Link>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     );
 }
