@@ -1,7 +1,22 @@
+"use client"
+
 import Image from "next/image"
+import { useState } from "react";
 
 
 export const CartItemCard = () => {
+    const [quantity, setQuantity] = useState(1); // Initial quantity is set to 1
+
+    const handleIncrement = () => {
+      setQuantity(prevQuantity => prevQuantity + 1);
+    };
+  
+    const handleDecrement = () => {
+      if (quantity > 1) { // Prevent quantity from going below 1
+        setQuantity(prevQuantity => prevQuantity - 1);
+      }
+    };
+    
     return (
         <div className="  bg-white flex gap-x-2 " >
             <div className="">
@@ -26,12 +41,12 @@ export const CartItemCard = () => {
                         <p className="text-[12px] leading-[16px] font-normal text-[#ED2E2E] ">6 units left</p>
                     </div>
                     <div className="w-full flex items-center font-openSans mt-[25px]  ">
-                        <div className="flex items-center justify-center bg-[#E3E3E3]">
-                            <p className="p-[12px] font-bold text-[36px] leading-[50px] text-[#D48CAF] ">-</p>
+                        <div className="flex items-center justify-center bg-[#E3E3E3] group ">
+                            <p className="p-[12px] font-bold text-[36px] leading-[50px] text-[#D48CAF] group-hover:cursor-pointer" onClick={handleDecrement}>-</p>
                         </div>
-                        <p className="font-semibold text-[24px] leading-[33px] px-[18px] py-[7px] ">1</p>
-                        <div className="flex items-center justify-center bg-[#E3E3E3]">
-                            <p className="p-[12px] font-bold text-[36px] leading-[50px] text-[#930549] ">+</p>
+                        <p className="font-semibold text-[24px] leading-[33px] px-[18px] py-[7px] ">{quantity}</p>
+                        <div className="flex items-center justify-center bg-[#E3E3E3] group">
+                            <p className="p-[12px] font-bold text-[36px] leading-[50px] text-[#930549] group-hover:cursor-pointer " onClick={handleIncrement}>+</p>
                         </div>
                     </div>
                 </div>

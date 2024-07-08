@@ -4,15 +4,20 @@ import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
 import { Search } from 'lucide-react';
 import { CartItemCard } from "@/components/cart-item-card"
+import Link from "next/link";
 
 const CartItems = () => {
     return (
         <div className="px-[75px] mt-[36px] ">
             {/* home to cart */}
             <div className="w-[100px] flex items-center justify-between py-2">
-                <p className="text-[#606060] text-[16px] font-normal font-openSans leading-[28px] ">Home</p>
+                <Link href="/">
+                    <p className="text-[#606060] text-[16px] font-normal font-openSans leading-[28px] ">Home</p>
+                </Link>
                 <MdKeyboardArrowRight className="w-[16px] h-[16px] " />
+                <Link href="/cart">
                 <p className="text-[#606060] text-[16px] font-bold font-openSans leading-[22px] ">Cart</p>
+                </Link>
             </div>
             {/* select all */}
             <div className=" w-[808px] mt-[26px] ">
@@ -79,9 +84,11 @@ const CartItems = () => {
                                     <p className="font-bold ">N 227,440</p>
                                 </div>
                             </div>
-                            <div className="w-full mt-[18px] flex items-center justify-center bg-[#720439] text-white p-[10px] ">
-                                <p className="font-semibold text-[16px] leading-[22px] ">Proceed to checkout</p>
-                            </div>
+                            <Link href="/checkout">
+                                <div className="w-full mt-[18px] flex items-center justify-center bg-[#720439] text-white p-[10px] ">
+                                    <p className="font-semibold text-[16px] leading-[22px] ">Proceed to checkout</p>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
