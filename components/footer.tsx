@@ -105,8 +105,8 @@ const Footer = () => {
                 <div className="flex flex-wrap bg-[#280114] items-center justify-between py-3 px-6 lg:px-[108px] text-[#79043C]">
                     <div className="flex flex-wrap items-center justify-between w-full">
                         {/* left */}
-                        <div className="flex flex-col lg:flex-row items-center justify-between gap-2 mb-4 lg:mb-0 lg:gap-x-2 border-b-2 lg:border-r-2 lg:border-b-0 border-[#79043C]">
-                            <div className="flex items-center gap-2">
+                        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-2 mb-4 lg:mb-0 lg:gap-x-2 ">
+                            <div className="flex items-center gap-2 md:border-b-2 lg:border-r-2 lg:border-b-0 border-[#79043C]">
                                 <Image
                                     src="/location_on.png"
                                     alt="location icon"
@@ -115,7 +115,7 @@ const Footer = () => {
                                 />
                                 <p className="font-normal text-[16px] text-white leading-[28px] px-2">123 Wellington Bassey Way</p>
                             </div>
-                            <div className="flex items-center gap-2">
+                            <div className="flex justify-start items-center gap-2">
                                 <Image
                                     src="/call.png"
                                     alt="call icon"
