@@ -28,9 +28,9 @@ export const ProductCard = ({ title,price,reviewno,supplier,imageString }: Produ
     const toggleFavorite = () => {
         setIsFavorite(!isFavorite);
         if (!isFavorite) {
-            toast.success("Item liked");
+            toast.success("Item added to favorite");
         } else {
-            toast.success("Item unliked");
+            toast.success("Item removed from favorite");
         }
     }
 

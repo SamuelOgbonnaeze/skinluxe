@@ -8,9 +8,10 @@ import Footer from "@/components/footer";
 import MobileNav from "@/components/mobile-nav";
 import Moisturizer from "@/components/moisturizer";
 import Navbar from "@/components/navbar";
-import NewSection from "@/components/new-section";
+import NewSection from "@/components/natural";
 import NightCream from "@/components/night-cream";
 import Overview from "@/components/overview";
+import Natural from "@/components/natural";
 
 
 
@@ -28,7 +29,7 @@ export default function Home() {
       <Overview />
       <BodyOil />
 
-      <NewSection />
+      <Natural />
       <Banner />
       <Moisturizer />
       <FaceOil />
