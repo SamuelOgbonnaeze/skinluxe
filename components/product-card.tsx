@@ -1,11 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import Star from "./star";
 import { IoHeart } from "react-icons/io5";
-import { Heart } from 'lucide-react';
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -29,14 +27,14 @@ export const ProductCard = () => {
     }
 
     return (
-        <div className="w-[151px] lg:w-[270px] h-[318px] lg:h-[540px] bg-white border border-[#EDEDED] hover:scale-105 transition-smooth duration-300 hover:shadow-xl " >
+        <div className="w-[151px] md:w-[215px]  lg:w-[270px] h-[300px] md:h-[320px] lg:h-[470px] bg-white border border-[#EDEDED] hover:scale-105 transition-smooth duration-300 hover:shadow-xl " >
             <div className="relative">
                 <Image
                     src="/product_image.png"
                     alt="Product Image"
                     width={300}
                     height={384}
-                    className=" w-[151px] lg:w-[300px] h-[181px] lg:h-[284px] object-cover"
+                    className=" w-full lg:w-[300px] h-[181px] lg:h-[284px] object-cover"
                 />
                 <IoHeart 
                     className={`absolute top-2 right-2 z-10 w-[14px] lg:w-[24px] h-[14px] lg:h-[24px] cursor-pointer ${isFavorite ? 'text-red-500 ' : 'text-white'}`}
@@ -63,7 +61,7 @@ export const ProductCard = () => {
                     </div>
                 </div>
                 <div onClick={onAdd} className=" flex items-center justify-center mt-2 mr-3 cursor-pointer">
-                    <HiOutlineShoppingCart className="w-[34px] h-[34px] p-2 border rounded-full bg-gray-500 text-white hover:bg-[#3D021E] " />
+                    <HiOutlineShoppingCart className="w-[34px] lg:w-[44px] lg:h-[44px] h-[34px] p-2 border rounded-full bg-[#D3B1C2] text-white hover:bg-[#3D021E] " />
                 </div>
             </div>
         </div>

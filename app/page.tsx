@@ -9,6 +9,7 @@ import MobileNav from "@/components/mobile-nav";
 import Moisturizer from "@/components/moisturizer";
 import Navbar from "@/components/navbar";
 import NewSection from "@/components/new-section";
+import NightCream from "@/components/night-cream";
 import Overview from "@/components/overview";
 
 
@@ -31,7 +32,7 @@ export default function Home() {
       <Banner />
       <Moisturizer />
       <FaceOil />
-      <ClientFeedback />
+      <NightCream />
       <Footer />
     </>
   );

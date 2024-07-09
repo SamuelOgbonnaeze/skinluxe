@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <div className="w-full py-[29px] px-[30px] lg:px-[72px] ">
+        <div className="w-full py-[29px] px-[30px] lg:px-[72px] border-b border-[#DFDFDF] ">
             <div className="w-full flex items-center justify-between ">
 
                 {/*  */}
@@ -28,11 +28,11 @@ const Navbar = () => {
                     <Link href="#moisturizer">
                         <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Moisturizer</p>
                     </Link>
-                    <Link href="#consult">
-                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Consultation</p>
+                    <Link href="#faceoil">
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Face Oil</p>
                     </Link>
-                    <Link href="#about">
-                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">About us</p>
+                    <Link href="#nightcream">
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Night Cream</p>
                     </Link>
                 </div>
                 {/*  */}

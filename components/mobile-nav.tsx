@@ -6,7 +6,7 @@ import { Input } from "./ui/input";
 
 const MobileNav = () => {
     return (
-        <div className="w-full py-[29px] px-[20px] ">
+        <div className="w-full py-[29px] px-[20px] border-b border-[#DFDFDF] ">
             <div className="w-full flex items-center justify-between ">
 
                 <NavMenu />

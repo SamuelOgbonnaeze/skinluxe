@@ -7,7 +7,7 @@ const Related = () => {
     return (
         <div  className="px-[23px] lg:px-[73px] mt-[33px] lg:mt-[115px] mb-[80px] lg:mb-[185px]">
             <div>
-                <p className="font-oldenburg text-[16px] mb:text-[24px] lg:text-4xl font-normal leading-[22px] lg:leading-[50px]  ">Related to this product</p>
+                <p className="font-oldenburg text-[16px] mb:text-[24px] lg:text-4xl font-normal leading-[22px] lg:leading-[50px]  ">Other Similar Products</p>
             </div>
 
             {/* Cards */}

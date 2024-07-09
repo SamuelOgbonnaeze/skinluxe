@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useState } from "react";
 
 
-export const CartItemCard = () => {
+export const CartItemCard2 = () => {
     const [quantity, setQuantity] = useState(1); // Initial quantity is set to 1
 
     const handleIncrement = () => {
@@ -18,7 +18,7 @@ export const CartItemCard = () => {
     };
 
     return (
-        <div className="w-full ">
+        <div className="w-full border border-[#B4B4B4]/20 hover:shadow-lg ">
 
             <div className="  bg-white flex gap-x-2 " >
                 <div className="">
@@ -36,11 +36,10 @@ export const CartItemCard = () => {
                     <div className="flex flex-col justify-start" >
                         <div className="w-full flex flex-col font-openSans md:gap-y-1" >
                             <p className="font-bold text-[14px] md:text-[18px] lg:text-[24px] leading-[19px] lg:leading-[33px] ">Skinluxe Glow Cream XG <br /> <span className="hidden lg:flex"> Improved Sygen Syrup</span></p>
-                            <p className="text-[10px] md:text-[14px] md:leading-[19px] font-semibold text-[#B43773] ">Body Oil</p>
+                            <p className="text-[10px] md:text-[14px] md:leading-[19px] font-semibold text-[#B43773] ">Face Oil</p>
                         </div>
                         <div className="w-full flex flex-col font-openSans mt-2 lg:mt-[18px] gap-y-1 ">
                             <p className="font-bold text-[14px] lg:text-[24px] text-[#A10550] leading-[19px] lg:leading-[33px] "><span className="line-through">N</span>52,680</p>
-                            <p className="text-[10px] md:text-[12px] leading-[13px] md:leading-[16px] font-normal text-[#ED2E2E] ">6 units left</p>
                         </div>
                         <div className="w-full hidden md:flex items-center font-openSans mt-[15px]  ">
                             <div className="flex items-center justify-center bg-[#720439] hover:opacity-40 group  ">
@@ -56,8 +55,8 @@ export const CartItemCard = () => {
 
 
             </div>
-            <div className="flex md:hidden items-center justify-between font-openSans px-1 ">
-                <div className="flex items-center text-[#D3B1C2] gap-x-1  ">
+            <div className="flex md:hidden items-center justify-between font-openSans px-1  ">
+                <div className="flex items-center text-[#D3B1C2] gap-x-1 ">
                     <Trash2 className="w-[16px] h-[16px] " />
                     <p className="font-bold font-openSans text-[10px] leading-[13px] ">Remove Item</p>
                 </div>

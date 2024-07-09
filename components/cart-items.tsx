@@ -5,6 +5,7 @@ import { Input } from "./ui/input";
 import { Search } from 'lucide-react';
 import { CartItemCard } from "@/components/cart-item-card"
 import Link from "next/link";
+import { CartItemCard2 } from "./cart-item-card-2";
 
 const CartItems = () => {
     return (
@@ -19,9 +20,14 @@ const CartItems = () => {
                     <p className="text-[#606060] text-[16px] font-bold font-openSans leading-[22px] ">Cart</p>
                 </Link>
             </div>
+            {/*  */}
+            <div className="flex flex-col lg:hidden mt-[30px] gap-y-3 mb-[7px]">
+                <p className="font-openSans font-semibold  text-[12px] leading-[16px] " >CART SUMMARY</p>
+                <p className="font-openSans font-semibold  text-[12px] leading-[16px] text-[#9B9CA1]" >Cart (4)</p>
+            </div>
             {/* select all */}
             <div className="hidden lg:flex items-center justify-between w-[808px] mt-[26px] ">
-                <div className="hidden md:flex items-center justify-between py-[29px] px-[37px] ">
+                <div className="flex w-full items-center justify-between py-[29px] px-[37px] ">
                     <div className="flex items-center gap-x-2 ">
                         <Checkbox className="border-[#B4B4B4] " />
                         <p className="font-openSans font-semibold text-[18px] text-[#B4B4B4] leading-[25px]">Select All Four Items</p>
@@ -35,31 +41,31 @@ const CartItems = () => {
             </div>
             {/* items */}
 
-            <div className="px-4 md:px-8 lg:px-12">
+            <div className="px-2 md:px-8 lg:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div className="col-span-1 lg:col-span-2">
                         <div className="w-full flex flex-col gap-y-6">
-                            <div className="flex items-center gap-x-2 md:gap-x-4">
+                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 hover:shadow-lg">
                                 <Checkbox className="border-black" />
                                 <CartItemCard />
                             </div>
-                            <div className="flex items-center gap-x-2 md:gap-x-4">
+                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 hover:shadow-lg">
+                                <Checkbox className="border-black" />
+                                <CartItemCard2 />
+                            </div>
+                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 hover:shadow-lg">
                                 <Checkbox className="border-black" />
                                 <CartItemCard />
                             </div>
-                            <div className="flex items-center gap-x-2 md:gap-x-4">
+                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 hover:shadow-lg">
                                 <Checkbox className="border-black" />
-                                <CartItemCard />
-                            </div>
-                            <div className="flex items-center gap-x-2 md:gap-x-4">
-                                <Checkbox className="border-black" />
-                                <CartItemCard />
+                                <CartItemCard2 />
                             </div>
                         </div>
                     </div>
                     <div className="col-span-1 border-t md:border-t-0 md:border-l-2 border-[#B4B4B470] mt-6 lg:mt-0">
                         <div className="flex flex-col justify-start pl-4 md:pl-12 text-black font-openSans">
-                            <p className="font-openSans font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[39px]">Order Summary</p>
+                            <p className="font-openSans font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[39px] flex md:hidden">Order Summary</p>
                             <div className="mt-4 md:mt-6 flex flex-col gap-y-3 md:gap-y-4">
                                 <div className="w-full flex justify-between font-openSans text-[16px] md:text-[20px] leading-[22px] md:leading-[28px]">
                                     <p>Sub Total (4 Items)</p>
