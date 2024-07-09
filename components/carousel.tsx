@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Carousel = () => {
     return (
-        <div className="relative w-full h-[195px] md:h-[400px] lg:h-[629px] mb-[86px]">
+        <div className="relative w-full h-[195px] md:h-[400px] lg:h-[629px] mb-[83px]">
 
 
             <Image

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <div className="w-full py-[29px] px-[72px] ">
+        <div className="w-full py-[29px] px-[30px] lg:px-[72px] ">
             <div className="w-full flex items-center justify-between ">
 
                 {/*  */}
@@ -18,21 +18,21 @@ const Navbar = () => {
                     </div>
                 </Link>
                 {/*  */}
-                <div className=" flex items-center gap-x-[40px] ">
+                <div className=" flex items-center gap-x-[20px] lg:gap-x-[40px] ">
                     <Link href="#natural">
-                        <p className="font-openSans font-bold text-[16px] leading-[22px] ">Natural</p>
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Natural</p>
                     </Link>
                     <Link href="#bodyoil">
-                        <p className="font-openSans font-bold text-[16px] leading-[22px] ">Body Oil</p>
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Body Oil</p>
                     </Link>
                     <Link href="#moisturizer">
-                        <p className="font-openSans font-bold text-[16px] leading-[22px] ">Moisturizer</p>
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Moisturizer</p>
                     </Link>
                     <Link href="#consult">
-                        <p className="font-openSans font-bold text-[16px] leading-[22px] ">Consultation</p>
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Consultation</p>
                     </Link>
                     <Link href="#about">
-                        <p className="font-openSans font-bold text-[16px] leading-[22px] ">About us</p>
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">About us</p>
                     </Link>
                 </div>
                 {/*  */}
