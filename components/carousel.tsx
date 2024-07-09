@@ -22,7 +22,7 @@ const Carousel = () => {
                 height={753}
                 className="absolute w-full md:w-[1000px] h-[195px] md:h-[400px] lg:w-full lg:h-full object-cover inset-0 z-10"
             />
-            <div className="relative w-full h-full flex flex-col items-center justify-center z-20 text-white text-center gap-y-2 lg:gap-y-[12px]">
+            <div className="relative w-full h-full flex flex-col items-center justify-center z-20 text-white text-center gap-y-2 md:gap-y-[12px]">
                 <p className="text-[16px] md:text-[24px] lg:text-[44px] font-openSans leading-[22px] md:leading-[36px] lg:leading-[62px] font-bold">Unlock Your Natural Glow</p>
 
                 <div className="  w-[319px] md:[522px] lg:w-[682px] lg:py-2 lg:px-4 ">
