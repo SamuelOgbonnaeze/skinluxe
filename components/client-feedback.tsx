@@ -4,7 +4,7 @@ const ClientFeedback = () => {
     return (
         <div className="py-8">
             <div className="flex w-[450px] mx-auto items-center justify-center mb-[75px]">
-                <h2 className="font-oldenburg text-[36px] leading-[50px]">What Our Clients Say</h2>
+                <h2 className="font-oldenburg text-[16px] mb:text-[24px] lg:text-4xl font-normal leading-[22px] lg:leading-[50px]  ">What Our Clients Say</h2>
             </div>
             <div className="overflow-hidden">
                 <div className="flex items-center justify-start animate-scroll gap-x-14 mb-32">

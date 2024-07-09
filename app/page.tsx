@@ -3,7 +3,7 @@ import BestSellers from "@/components/best-sellers";
 import Carousel from "@/components/carousel";
 import CeoFeedback from "@/components/ceofeedback";
 import ClientFeedback from "@/components/client-feedback";
-import Consult from "@/components/consult";
+import FaceOil from "@/components/face-oil";
 import Footer from "@/components/footer";
 import Moisturizer from "@/components/moisturizer";
 import Navbar from "@/components/navbar";
@@ -19,11 +19,11 @@ export default function Home() {
       <Carousel />
       <Overview />
       <BestSellers />
-      <Consult />
+     
       <NewSection />
       <Banner />
       <Moisturizer />
-      <CeoFeedback />
+      <FaceOil />
       <ClientFeedback />
       <Footer />
     </>

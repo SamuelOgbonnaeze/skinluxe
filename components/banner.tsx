@@ -2,14 +2,14 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-[733px] mb-[102px] overflow-x-hidden">
+    <div className="relative  h-[237px] md:h-[400px] lg:w-full lg:h-[733px] mb-[102px] overflow-x-hidden">
       {/* Background image */}
       <Image
         src="/banner_img.png"
         alt="banner image"
         width={1440}
         height={753}
-        className="absolute w-full h-full object-cover inset-0 z-0"
+        className="absolute  w-full h-full object-cover inset-0 z-0"
       />
 
       {/* Overlay image */}
@@ -21,10 +21,9 @@ const Banner = () => {
       />
 
       {/* Text content */}
-      <div className="relative z-20 flex items-center ml-[75px]  w-full h-full text-left">
-        <div className="text-white w-[591px] h-[715px] ">
-          {/* Add any text content here */}
-          <p className="font-bold font-outfit text-8xl leading-[143px] h-full ">PRESERVE YOUR GLOW, EMBRACE YOUR HUE</p>
+      <div className="relative z-20 flex items-center ml-[50px] lg:ml-[75px]  w-full h-full text-left">
+        <div className="text-white w-[118px] md:w-[250px] lg:w-[591px] h-[175px] md:h-[400px] lg:h-[715px] ">
+          <p className="font-bold font-outfit text-[20px] md:text-4xl lg:text-8xl leading-[35px] md:leading-[100px] lg:leading-[143px] h-full ">PRESERVE YOUR GLOW, EMBRACE YOUR HUE</p>
         </div>
       </div>
     </div>

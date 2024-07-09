@@ -1,12 +1,12 @@
 import { ProductCard } from "./product-card";
 
-const products = [1, 2, 3, 4, 5, 6, 7, 8];
+const products = [1, 2, 3, 4];
 
-const Moisturizer = () => {
+const NightCream = () => {
     return (
-        <div id="moisturizer" className="px-[23px] lg:px-[75px] mb-[85px]">
+        <div id="nightcream" className="px-[23px] lg:px-[75px] mb-[85px]">
             <div>
-                <p className="font-oldenburg text-[16px] mb:text-[24px] lg:text-4xl font-normal leading-[22px] lg:leading-[50px]   ">Moisturizer</p>
+                <p className="font-oldenburg text-[16px] mb:text-[24px] lg:text-4xl font-normal leading-[22px] lg:leading-[50px]   ">Night Cream</p>
             </div>
 
             {/* Cards */}
@@ -22,4 +22,4 @@ const Moisturizer = () => {
     );
 }
 
-export default Moisturizer;
+export default NightCream;
