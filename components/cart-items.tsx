@@ -1,7 +1,6 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Trash } from 'lucide-react';
 import { Checkbox } from "./ui/checkbox";
-import { Input } from "./ui/input";
 import { Search } from 'lucide-react';
 import { CartItemCard } from "@/components/cart-item-card"
 import Link from "next/link";
