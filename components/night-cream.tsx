@@ -3,38 +3,38 @@ import { ProductCard } from "./product-card";
 const products = [
     {
         key: 1,
-        title: "Skinluxe Este Glow",
-        price: "86,780",
+        title: "Sertin Syrup Cream",
+        price: "16,000",
         supplier: "Skinluxe",
         reviewno: "4",
-        imageString: "image_102"
+        imageString: "image_20"
 
     },
     {
         key: 2,
-        title: "Kalnitify Cream",
-        price: "46,000",
+        title: "Face Smoother",
+        price: "88,600",
         supplier: "Skinluxe",
         reviewno: "3",
-        imageString: "image_100"
+        imageString: "image_21"
 
     },
     {
         key: 3,
-        title: "Essensial Robs Cream",
-        price: "71,200",
+        title: "Sertin Cover Cream",
+        price: "17,200",
         supplier: "Skinluxe",
         reviewno: "5",
-        imageString: "image_99"
+        imageString: "image_22"
 
     },
     {
         key: 4,
-        title: "Essensial Robs Cream II",
-        price: "92,100",
+        title: "Sertin Cover Cream II",
+        price: "6,890",
         supplier: "Skinluxe",
         reviewno: "2",
-        imageString: "image_111"
+        imageString: "image_23"
 
     },
     {

@@ -38,43 +38,6 @@ const products = [
         imageString: "image_111"
 
     },
-    {
-        key: 5,
-        title: "Skin Brightener Rob",
-        price: "76,000",
-        supplier: "Skinluxe",
-        reviewno: "5",
-        imageString: "image_110"
-
-    },
-    {
-        key: 6,
-        title: "Skinluxe Moist",
-        price: "88,670",
-        supplier: "Skinluxe",
-        reviewno: "1",
-        imageString: "image_109"
-
-    },
-    {
-        key: 7,
-        title: "Essensial Cleanser",
-        price: "69,330",
-        supplier: "Meltin and more",
-        reviewno: "7",
-        imageString: "image_98"
-
-    },
-    {
-        key: 8,
-        title: "Skinluxe Purifier Sets",
-        price: "1,110,000",
-        supplier: "Skinluxe",
-        reviewno: "4",
-        imageString: "image_96"
-
-    }
-
 ];
 
 const Related = () => {

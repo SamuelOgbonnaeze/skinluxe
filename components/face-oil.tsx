@@ -3,38 +3,38 @@ import { ProductCard } from "./product-card";
 const products = [
     {
         key: 1,
-        title: "Skinluxe Este Glow",
-        price: "86,780",
-        supplier: "Skinluxe",
+        title: "Waxed Flowill",
+        price: "56, 900",
+        supplier: "Flowill",
         reviewno: "4",
-        imageString: "image_102"
+        imageString: "image_16"
 
     },
     {
         key: 2,
-        title: "Kalnitify Cream",
-        price: "46,000",
+        title: "Orange Pecemed Oil",
+        price: "789,500",
         supplier: "Skinluxe",
         reviewno: "3",
-        imageString: "image_100"
+        imageString: "image_17"
 
     },
     {
         key: 3,
-        title: "Essensial Robs Cream",
-        price: "71,200",
+        title: "Skinluxe Glow Oil Syrup",
+        price: "85,700",
         supplier: "Skinluxe",
         reviewno: "5",
-        imageString: "image_99"
+        imageString: "image_18"
 
     },
     {
         key: 4,
-        title: "Essensial Robs Cream II",
-        price: "92,100",
+        title: "Skinluxe Glow Oil Syrup",
+        price: "87,640",
         supplier: "Skinluxe",
         reviewno: "2",
-        imageString: "image_111"
+        imageString: "image_19"
 
     },
     {
