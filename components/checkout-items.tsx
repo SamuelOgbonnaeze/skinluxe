@@ -42,7 +42,7 @@ const CheckoutItem = () => {
 
             <div className="px-[24px] py-[48px] ">
                 <div className="w-full grid grid-cols-3">
-                    <div className="col-span-3 lg:col-span-2">
+                    <div className="col-span-3 md:col-span-2">
                         <PaymentOptions />
 
                         <div onClick={handlePayment} className="w-full mt-[31px] flex lg:hidden items-center justify-center bg-[#720439] text-white p-[10px] hover:cursor-pointer ">
