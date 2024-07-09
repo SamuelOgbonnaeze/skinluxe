@@ -4,7 +4,14 @@ import Image from "next/image"
 import { useState } from "react";
 
 
-export const CartItemCard2 = () => {
+interface CartItemCard2Props{
+    title:string;
+    price: string;
+    category:string;
+    imgstring: string;
+}
+
+export const CartItemCard2 = ({title, price, category, imgstring}: CartItemCard2Props) => {
     const [quantity, setQuantity] = useState(1); // Initial quantity is set to 1
 
     const handleIncrement = () => {
@@ -23,7 +30,7 @@ export const CartItemCard2 = () => {
             <div className="  bg-white flex gap-x-2 " >
                 <div className="">
                     <Image
-                        src="/frame-2.png"
+                        src={`/${imgstring}.png`}
                         alt=""
                         width={322}
                         height={277}
@@ -35,11 +42,11 @@ export const CartItemCard2 = () => {
                 <div className=" lg:pt-[24px] w-full lg:w-[400px] ">
                     <div className="flex flex-col justify-start" >
                         <div className="w-full flex flex-col font-openSans md:gap-y-1" >
-                            <p className="font-bold text-[14px] md:text-[18px] lg:text-[24px] leading-[19px] lg:leading-[33px] ">Skinluxe Glow Cream XG <br /> <span className="hidden lg:flex"> Improved Sygen Syrup</span></p>
-                            <p className="text-[10px] md:text-[14px] md:leading-[19px] font-semibold text-[#B43773] ">Face Oil</p>
+                            <p className="font-bold text-[14px] md:text-[18px] lg:text-[24px] leading-[19px] lg:leading-[33px] ">{title}</p>
+                            <p className="text-[10px] md:text-[14px] md:leading-[19px] font-semibold text-[#B43773] ">{category}</p>
                         </div>
                         <div className="w-full flex flex-col font-openSans mt-2 lg:mt-[18px] gap-y-1 ">
-                            <p className="font-bold text-[14px] lg:text-[24px] text-[#A10550] leading-[19px] lg:leading-[33px] "><span className="line-through">N</span>52,680</p>
+                            <p className="font-bold text-[14px] lg:text-[24px] text-[#A10550] leading-[19px] lg:leading-[33px] "><span className="line-through">N</span>{price}</p>
                         </div>
                         <div className="w-full hidden md:flex items-center font-openSans mt-[15px]  ">
                             <div className="flex items-center justify-center bg-[#720439] hover:opacity-40 group  ">

@@ -47,19 +47,41 @@ const CartItems = () => {
                         <div className="w-full flex flex-col gap-y-6">
                             <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
                                 <Checkbox className="border-black" />
-                                <CartItemCard />
+                                <CartItemCard
+                                    title="Skinluxe Glow Cream XG"
+                                    price="52,860"
+                                    unitsleft="3"
+                                    imgstring="Rectangle 120"
+                                    category="Body Oil"
+                                />
                             </div>
                             <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
                                 <Checkbox className="border-black" />
-                                <CartItemCard2 />
+                                <CartItemCard2
+                                    title="Skin Este Glow"
+                                    price="86,780"
+                                    imgstring="image_102"
+                                    category="Moisturizer"
+                                />
                             </div>
                             <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
                                 <Checkbox className="border-black" />
-                                <CartItemCard />
+                                <CartItemCard
+                                    title="Sefera Mentius Oil"
+                                    price="88,000"
+                                    unitsleft="3"
+                                    imgstring="image_115"
+                                    category="Body Oil"
+                                />
                             </div>
                             <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
                                 <Checkbox className="border-black" />
-                                <CartItemCard2 />
+                                <CartItemCard2
+                                    title="Red Blissause Oil"
+                                    price="76,000"
+                                    imgstring="image 114"
+                                    category="Natural"
+                                />
                             </div>
                         </div>
                     </div>
