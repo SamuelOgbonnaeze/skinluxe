@@ -68,8 +68,8 @@ export const ProductCard = ({ title,price,reviewno,supplier,imageString }: Produ
                         <p className="text-[#9B9CA1] font-openSans font-normal text-[6px] lg:text-[10px] leading-[8px] lg:leading-[13px] ">{reviewno} Reviews</p>
                     </div>
                 </div>
-                <div onClick={onAdd} className=" flex  items-center justify-center mt-2 mr-2 p-1 cursor-pointer rounded-full  text-white hover:bg-[#3D021E] bg-[#D3B1C2]">
-                    <ShoppingCart className="w-[18px] lg:w-[24px] lg:h-[24px] h-[18px]   " />
+                <div onClick={onAdd} className=" flex  items-center justify-center mt-2 mr-2 p-2 cursor-pointer rounded-full  text-white hover:bg-[#3D021E] bg-[#D3B1C2]">
+                    <ShoppingCart className="w-4 h-4   " />
                 </div>
             </div>
         </div>
