@@ -44,11 +44,11 @@ const MobileNav = () => {
                 </div>
             </div>
             <div className="flex w-full items-center justify-between mt-[19px] " >
-                <div className="flex items-center border border-[#9B9CA1] rounded-md px-2 ">
+                <div className="flex items-center border border-[#9B9CA1] px-2 ">
                     <Search className="w-[16px] h-[16px] " />
                     <Input className="border-none" placeholder="Search for product" />
                 </div>
-                <button className="px-[8px] py-[20px] text-[12px] text-white bg-[#720439] rounded-md font-openSans font-normal leading-[17px] text-center h-[34px] flex items-center justify-center w-[79px] ">
+                <button className="px-[8px] py-[20px] text-[12px] text-white bg-[#720439]  font-openSans font-normal leading-[17px] text-center h-[34px] flex items-center justify-center w-[79px] ">
                     Search
                 </button>
             </div>
