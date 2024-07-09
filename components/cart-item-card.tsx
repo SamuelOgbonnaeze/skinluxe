@@ -27,7 +27,7 @@ export const CartItemCard = ({title, price, unitsleft, category, imgstring}:Cart
     return (
         <div className="w-full ">
 
-            <div className="  bg-white flex gap-x-2 " >
+            <div className="  bg-white flex gap-x-2 lg:gap-x-6 " >
                 <div className="">
                     <Image
                         src={`/${imgstring}.png`}
@@ -53,7 +53,7 @@ export const CartItemCard = ({title, price, unitsleft, category, imgstring}:Cart
                             <div className="flex items-center justify-center bg-[#720439] hover:opacity-40 group  ">
                                 <p className="p-2 font-bold text-[14px] lg:text-[30px] leading-[19px] lg:leading-[24px] text-white  group-hover:cursor-pointer " onClick={handleDecrement}>-</p>
                             </div>
-                            <p className="font-semibold text-[24px] leading-[33px] px-[18px] py-[7px] ">{quantity}</p>
+                            <p className="font-semibold text-[16px] lg:text-[24px] leading-[33px] px-[10px] py-[5px] ">{quantity}</p>
                             <div className="flex items-center justify-center bg-[#720439] hover:opacity-40 group  ">
                                 <p className="p-2 font-bold text-[14px] lg:text-[30px] leading-[19px] lg:leading-[24px] text-white  group-hover:cursor-pointer " onClick={handleIncrement}>+</p>
                             </div>
@@ -72,7 +72,7 @@ export const CartItemCard = ({title, price, unitsleft, category, imgstring}:Cart
                     <div className="flex items-center justify-center bg-[#720439] hover:opacity-40 group w-[26px] h-[21px] ">
                         <p className="p-1 font-bold text-[14px] lg:text-[24px] leading-[19px] lg:leading-[24px] text-white  group-hover:cursor-pointer " onClick={handleDecrement}>-</p>
                     </div>
-                    <p className="font-semibold text-[24px] leading-[33px] px-[10px] py-[5px] ">{quantity}</p>
+                    <p className="font-semibold text-[16px] lg:text-[24px] leading-[33px] px-[10px] py-[5px] ">{quantity}</p>
                     <div className="flex items-center justify-center bg-[#720439] hover:opacity-40 group w-[26px] h-[21px] ">
                         <p className="p-1 font-bold text-[14px] lg:text-[24px] leading-[19px] lg:leading-[24px] text-white  group-hover:cursor-pointer " onClick={handleIncrement}>+</p>
                     </div>

@@ -86,7 +86,7 @@ const CartItems = () => {
                     </div>
                     <div className="col-span-1 border-t md:border-t-0 md:border-l-2 border-[#B4B4B470] mt-6 lg:mt-0">
                         <div className="flex flex-col justify-start pl-4 md:pl-12 text-black font-openSans">
-                            <p className="font-openSans font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[39px] flex md:hidden">Order Summary</p>
+                            <p className="font-openSans font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[39px] flex">Order Summary</p>
                             <div className="mt-4 md:mt-6 flex flex-col gap-y-3 md:gap-y-4">
                                 <div className="w-full flex justify-between font-openSans text-[16px] md:text-[20px] leading-[22px] md:leading-[28px]">
                                     <p>Sub Total (4 Items)</p>

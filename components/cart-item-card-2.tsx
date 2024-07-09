@@ -12,7 +12,7 @@ interface CartItemCard2Props{
 }
 
 export const CartItemCard2 = ({title, price, category, imgstring}: CartItemCard2Props) => {
-    const [quantity, setQuantity] = useState(1); // Initial quantity is set to 1
+    const [quantity, setQuantity] = useState(1); 
 
     const handleIncrement = () => {
         setQuantity(prevQuantity => prevQuantity + 1);
@@ -27,7 +27,7 @@ export const CartItemCard2 = ({title, price, category, imgstring}: CartItemCard2
     return (
         <div className="w-full ">
 
-            <div className="  bg-white flex gap-x-2 " >
+            <div className="  bg-white flex gap-x-2 lg:gap-x-6 " >
                 <div className="">
                     <Image
                         src={`/${imgstring}.png`}
@@ -71,7 +71,7 @@ export const CartItemCard2 = ({title, price, category, imgstring}: CartItemCard2
                     <div className="flex items-center justify-center bg-[#720439] hover:opacity-40 group w-[26px] h-[21px] ">
                         <p className="p-1 font-bold text-[14px] lg:text-[24px] leading-[19px] lg:leading-[24px] text-white  group-hover:cursor-pointer " onClick={handleDecrement}>-</p>
                     </div>
-                    <p className="font-semibold text-[24px] leading-[33px] px-[10px] py-[5px] ">{quantity}</p>
+                    <p className="font-semibold text-[16px] lg:text-[24px] leading-[33px] px-[10px] py-[5px] ">{quantity}</p>
                     <div className="flex items-center justify-center bg-[#720439] hover:opacity-40 group w-[26px] h-[21px] ">
                         <p className="p-1 font-bold text-[14px] lg:text-[24px] leading-[19px] lg:leading-[24px] text-white  group-hover:cursor-pointer " onClick={handleIncrement}>+</p>
                     </div>
