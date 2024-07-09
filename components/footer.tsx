@@ -70,9 +70,11 @@ const Footer = () => {
                             <div className="flex flex-col space-y-2">
                                 <h3 className="font-bold text-[18px] md:text-[24px] leading-[24px] md:leading-[33.6px] mb-2">Products</h3>
                                 <div className="font-normal text-[12px] md:text-[16px] leading-[20px] md:leading-[28px]">
-                                    <p>Natural</p>
                                     <p>Body Oil</p>
+                                    <p>Natural</p>
                                     <p>Moisturizer</p>
+                                    <p>Face Oil</p>
+                                    <p>Night Cream</p>
                                 </div>
                             </div>
                         </div>
