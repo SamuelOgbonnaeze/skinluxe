@@ -45,19 +45,19 @@ const CartItems = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div className="col-span-1 lg:col-span-2">
                         <div className="w-full flex flex-col gap-y-6">
-                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 hover:shadow-lg">
+                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
                                 <Checkbox className="border-black" />
                                 <CartItemCard />
                             </div>
-                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 hover:shadow-lg">
+                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
                                 <Checkbox className="border-black" />
                                 <CartItemCard2 />
                             </div>
-                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 hover:shadow-lg">
+                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
                                 <Checkbox className="border-black" />
                                 <CartItemCard />
                             </div>
-                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 hover:shadow-lg">
+                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
                                 <Checkbox className="border-black" />
                                 <CartItemCard2 />
                             </div>

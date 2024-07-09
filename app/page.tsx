@@ -1,5 +1,5 @@
 import Banner from "@/components/banner";
-import BestSellers from "@/components/best-sellers";
+import BodyOil from "@/components/body-oil";
 import Carousel from "@/components/carousel";
 import CeoFeedback from "@/components/ceofeedback";
 import ClientFeedback from "@/components/client-feedback";
@@ -26,7 +26,7 @@ export default function Home() {
 
       <Carousel />
       <Overview />
-      <BestSellers />
+      <BodyOil />
 
       <NewSection />
       <Banner />
