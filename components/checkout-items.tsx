@@ -4,12 +4,16 @@ import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import PaymentOptions from "./payment-options";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
+
 
 
 const CheckoutItem = () => {
+    const router = useRouter();
 
     const handlePayment = () => {
-        toast.success("Payment Successful")
+        toast.success("Payment Successful");
+        router.push("/")
     };
 
     return (
