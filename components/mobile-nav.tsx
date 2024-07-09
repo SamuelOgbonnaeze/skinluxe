@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import NavMenu from "./nav-menu";
 import { Search } from "lucide-react";
 import { Input } from "./ui/input";
+import { ShoppingCart } from 'lucide-react';
 
 const MobileNav = () => {
     return (
@@ -24,14 +26,9 @@ const MobileNav = () => {
                 <div className="flex items-center gap-x-4 ">
 
                     <Link href="/cart">
-                        <div className="">
-                            <Image
-                                src="/shopping_cart.png"
-                                alt=""
-                                width={16}
-                                height={16}
-                                className=""
-                            />
+                    <div className="relative flex group px-2">
+                            <ShoppingCart className="w-[16px] h-[16px] text-[#D3B1C2] group-hover:text-[#720439]" />
+                            <p className="absolute text-[12px] text-[#D3B1C2] -top-2 right-0 group-hover:text-[#720439] ">4</p>
                         </div>
                     </Link>
                     <div className="flex items-center justify-between gap-x-1">

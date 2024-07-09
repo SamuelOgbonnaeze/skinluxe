@@ -18,7 +18,7 @@ export const CartItemCard2 = () => {
     };
 
     return (
-        <div className="w-full border border-[#B4B4B4]/20 hover:shadow-lg ">
+        <div className="w-full ">
 
             <div className="  bg-white flex gap-x-2 " >
                 <div className="">

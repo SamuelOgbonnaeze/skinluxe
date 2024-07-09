@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ShoppingCart } from 'lucide-react';
+
 const Navbar = () => {
     return (
         <div className="w-full py-[29px] px-[30px] lg:px-[72px] border-b border-[#DFDFDF] ">
@@ -20,19 +22,19 @@ const Navbar = () => {
                 {/*  */}
                 <div className=" flex items-center gap-x-[20px] lg:gap-x-[40px] ">
                     <Link href="#natural">
-                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Natural</p>
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] text-[#D3B1C2] hover:text-[#720439] leading-[22px] ">Natural</p>
                     </Link>
                     <Link href="#bodyoil">
-                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Body Oil</p>
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] text-[#D3B1C2] hover:text-[#720439] leading-[22px] ">Body Oil</p>
                     </Link>
                     <Link href="#moisturizer">
-                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Moisturizer</p>
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] text-[#D3B1C2] hover:text-[#720439] leading-[22px] ">Moisturizer</p>
                     </Link>
                     <Link href="#faceoil">
-                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Face Oil</p>
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] text-[#D3B1C2] hover:text-[#720439] leading-[22px] ">Face Oil</p>
                     </Link>
                     <Link href="#nightcream">
-                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] leading-[22px] ">Night Cream</p>
+                        <p className="font-openSans font-bold text-[12px] lg:text-[16px] text-[#D3B1C2] hover:text-[#720439] leading-[22px] ">Night Cream</p>
                     </Link>
                 </div>
                 {/*  */}
@@ -47,14 +49,9 @@ const Navbar = () => {
                         />
                     </div>
                     <Link href="/cart">
-                        <div className="">
-                            <Image
-                                src="/shopping_cart.png"
-                                alt=""
-                                width={24}
-                                height={24}
-                                className=""
-                            />
+                        <div className="relative flex group px-2">
+                            <ShoppingCart className="w-[24px] h-[24px] text-[#D3B1C2] group-hover:text-[#720439]" />
+                            <p className="absolute text-[16px] text-[#D3B1C2] -top-2 -right-1 group-hover:text-[#720439] ">4</p>
                         </div>
                     </Link>
                     <div className="flex items-center justify-between gap-x-1">
