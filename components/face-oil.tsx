@@ -86,7 +86,7 @@ const FaceOil = () => {
             {/* Cards */}
             <div className=" mt-[38px] ">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                {products.map((product) => (
+                {/* {products.map((product) => (
                         <ProductCard
                             key={product.key}
                             title={product.title}
@@ -95,7 +95,7 @@ const FaceOil = () => {
                             reviewno={product.reviewno}
                             imageString={product.imageString}
                         />
-                    ))}
+                    ))} */}
                 </div>
             </div>
 
