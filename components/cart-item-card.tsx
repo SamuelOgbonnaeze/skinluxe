@@ -1,17 +1,25 @@
 "use client"
+import useCart from "@/lib/store";
 import { Trash2 } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 interface CartItemCardProps{
+    id:string;
     title:string;
     price: string;
     unitsleft:string;
-    category:string;
     imgstring: string;
 }
 
-export const CartItemCard = ({title, price, unitsleft, category, imgstring}:CartItemCardProps) => {
+export const CartItemCard = ({id, title, price, unitsleft, imgstring}:CartItemCardProps) => {
+    const cart= useCart()
+
+    const onRemove = () => {
+        cart.removeItem(id);
+        toast.success("Item removed from cart");
+    }   
     const [quantity, setQuantity] = useState(1); // Initial quantity is set to 1
 
     const handleIncrement = () => {
@@ -25,7 +33,7 @@ export const CartItemCard = ({title, price, unitsleft, category, imgstring}:Cart
     };
 
     return (
-        <div className="w-full ">
+        <div className="w-full mt-4 ">
 
             <div className="  bg-white flex gap-x-2 lg:gap-x-6 " >
                 <div className="">
@@ -43,7 +51,6 @@ export const CartItemCard = ({title, price, unitsleft, category, imgstring}:Cart
                     <div className="flex flex-col justify-start" >
                         <div className="w-full flex flex-col font-openSans md:gap-y-1" >
                             <p className="font-bold text-[14px] md:text-[18px] lg:text-[24px] leading-[19px] lg:leading-[33px] ">{title}</p>
-                            <p className="text-[10px] md:text-[14px] md:leading-[19px] font-semibold text-[#B43773] ">{category}</p>
                         </div>
                         <div className="w-full flex flex-col font-openSans mt-2 lg:mt-[18px] gap-y-1 ">
                             <p className="font-bold text-[14px] lg:text-[24px] text-[#A10550] leading-[19px] lg:leading-[33px] "><span className="line-through">N</span>{price}</p>
@@ -63,8 +70,8 @@ export const CartItemCard = ({title, price, unitsleft, category, imgstring}:Cart
 
 
             </div>
-            <div className="flex md:hidden items-center justify-between font-openSans px-1 ">
-                <div className="flex items-center text-[#D3B1C2] gap-x-1  ">
+            <div className="flex md:hidden  items-center justify-between font-openSans px-1 ">
+                <div onClick={onRemove} className="flex  items-center text-[#D3B1C2] gap-x-1 hover:cursor-pointer hover:text-[#D3B1A2]  ">
                     <Trash2 className="w-[16px] h-[16px] " />
                     <p className="font-bold font-openSans text-[10px] leading-[13px] ">Remove Item</p>
                 </div>

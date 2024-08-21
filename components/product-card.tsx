@@ -15,9 +15,9 @@ import useCartStore from "@/lib/store"; // Import the store
 interface ProductCardProps {
     id: string;
     title: string;
-    price: number;
+    price: string;
     supplier: string;
-    reviewno: number | null;
+    reviewno: string | null;
     imageString: string;
 }
 
@@ -28,8 +28,7 @@ export const ProductCard = ({ id, title, price, reviewno, supplier, imageString 
     const router = useRouter();
     const [isFavorite, setIsFavorite] = useState(false);
     const addToCart = useCartStore((state) => state.addToCart); // Get addToCart function from store
-    const removeItem = useCartStore((state) => state.removeItem); // Get removeItem function from store
-    const removeAll = useCartStore((state) => state.removeAll); // Get removeAll function from store
+    
 
 
     const onAdd = () => {
@@ -37,15 +36,7 @@ export const ProductCard = ({ id, title, price, reviewno, supplier, imageString 
         addToCart(product);
     }
 
-    const onRemove = () => {
-        removeItem(id);
-        toast.success("Item removed from cart");
-    }
-
-    const onClearCart = () => {
-        removeAll();
-        toast.success("Cart cleared");
-    }
+   
 
     const toggleFavorite = () => {
         setIsFavorite(!isFavorite);
@@ -64,10 +55,10 @@ export const ProductCard = ({ id, title, price, reviewno, supplier, imageString 
     
 
     return (
-        <div onClick={onClick} className="w-[151px] md:w-[215px] lg:w-[270px] h-[300px] md:h-[320px] lg:h-[470px] bg-white border border-[#EDEDED] hover:scale-105 transition-smooth duration-300 hover:shadow-xl ">
+        <div  className="w-[151px] md:w-[215px] lg:w-[270px] h-[300px] md:h-[320px] lg:h-[470px] bg-white border border-[#EDEDED] hover:scale-105 transition-smooth duration-300 hover:shadow-xl ">
             <div className="relative">
                 <Image
-                    src={`https://api.timbu.cloud/images/${imageString}`}
+                    src={`/${imageString}.png`}
                     alt="Product Image"
                     width={300}
                     height={384}

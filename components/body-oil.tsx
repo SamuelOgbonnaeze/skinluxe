@@ -3,75 +3,86 @@ import { useState, useEffect } from 'react';
 import { ProductCard } from './product-card';
 
 
-
-interface Photo {
-    url: string;
-}
-
-interface Product {
-    name: string;
-    description: string | null;
-    unique_id: string;
-    url_slug: string;
-    is_available: boolean;
-    is_service: boolean;
-    previous_url_slugs: string | null;
-    unavailable: boolean;
-    unavailable_start: string | null;
-    unavailable_end: string | null;
-    id: string;
-    parent_product_id: string | null;
-    parent: string | null;
-    organization_id: string;
-    stock_id: string | null;
-    product_image: any[];
-    categories: any[];
-    date_created: string;
-    last_updated: string;
-    user_id: string;
-    photos: Photo[];
-    prices: number | null;
-    stocks: any | null;
-    is_deleted: boolean;
-    available_quantity: number | null;
-    selling_price: number | null;
-    discounted_price: number | null;
-    buying_price: number | null;
-    extra_infos: any | null;
-    featured_reviews: any | null;
-    unavailability: any[];
-    supplier: string | null;
-}
-
 const BodyOil = () => {
-    const [products, setProducts] = useState<Product[]>([]);
+    const products = [
+        {
+            key: 1,
+            title: "Saint Leave Preservoiur",
+            price: "16,000",
+            supplier: "Skinluxe",
+            reviewno: "4",
+            imageString: "image_103"
+
+        },
+        {
+            key: 2,
+            title: "Coculeave Concotion",
+            price: "76,000",
+            supplier: "Jenny's Glow",
+            reviewno: "3",
+            imageString: "image_104"
+
+        },
+        {
+            key: 3,
+            title: "Tiffa Leave Es Tracts",
+            price: "76,000",
+            supplier: "Skinluxe",
+            reviewno: "5",
+            imageString: "image_101"
+
+        },
+        {
+            key: 4,
+            title: "Coconut Melt",
+            price: "78,000",
+            supplier: "Skinluxe",
+            reviewno: "2",
+            imageString: "image_112"
+
+        },
+        {
+            key: 5,
+            title: "Palleave Selucted Cream",
+            price: "450,000",
+            supplier: "Skinluxe",
+            reviewno: "4",
+            imageString: "image_108"
+
+        },
+        {
+            key: 6,
+            title: "Paleted Senused Oil",
+            price: "76,231",
+            supplier: "Skinluxe",
+            reviewno: "1",
+            imageString: "image_116"
+
+        },
+        {
+            key: 7,
+            title: "Indexed Meltin",
+            price: "51,000",
+            supplier: "Meltin and more",
+            reviewno: "7",
+            imageString: "image_14"
+
+        },
+        {
+            key: 8,
+            title: "Isuned Serti",
+            price: "76,410",
+            supplier: "Skinluxe",
+            reviewno: "4",
+            imageString: "image_15"
+
+        }
+
+    ];
+
     const [isLoading, setIsLoading] = useState(false);
 
-    useEffect(() => {
-        const fetchProducts = async () => {
-            try {
-                setIsLoading(true);
-                const response = await fetch('/api/products'); 
-                const data = await response.json();
 
-                if (data && data.items) {
-                    setProducts(data.items as Product[]);
-                    setIsLoading(false);
-                } else {
-                    console.error('Error fetching products: Response structure incorrect');
-                    setIsLoading(false);
-                }
-            } catch (error) {
-                console.error('Error fetching products:', error);
-                setIsLoading(false);
-            }
-        };
-
-        fetchProducts();
-    }, []);
-
-    console.log(products); // Log the products array to inspect data
-    // console.log(products[7].photos[0].url)
 
     return (
         <div id="bodyoil" className="px-[23px] lg:px-[75px] mt-[77px] mb-[85px]">
@@ -87,18 +98,18 @@ const BodyOil = () => {
                             <div>
                                 <p>Loading...</p>
                             </div>
-                        ) : (
-                            products.map((product: Product) => (
-                                <ProductCard
-                                    key={product.id}
-                                    id={product.id}
-                                    title={product.name}
-                                    price={product.selling_price ?? 0} // Default to 0 if selling price is null
-                                    supplier={product.supplier ?? ''} // Default to 'Unknown' if supplier is null
-                                    reviewno={product.available_quantity ?? 0} // Default to 0 if available quantity is null
-                                    imageString={product.photos.length > 0 ? product.photos[0].url : ''} // Default to empty string if no photos
-                                />
-                            ))
+                        ) : ( products.map((product) => (
+                                    <ProductCard
+                                        id={`${product.key}`}
+                                        key={product.key}
+                                        title={product.title}
+                                        price={product.price}
+                                        supplier={product.supplier}
+                                        reviewno={product.reviewno}
+                                        imageString={product.imageString}
+                                    />
+                                ))
+                            
                         )
                     }
                 </div>

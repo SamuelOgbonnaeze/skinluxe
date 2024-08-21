@@ -8,7 +8,7 @@ import useCartStore from "@/lib/store";
 
 const Navbar = () => {
 
-    const cart = useCartStore((state) => state.cart);
+    const cart = useCartStore((state) => state.items);
 
     return (
         <div className="w-full py-[29px] px-[30px] lg:px-[72px] border-b border-[#DFDFDF] ">

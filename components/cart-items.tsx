@@ -1,12 +1,38 @@
+"use client"
+
+import { useEffect, useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Trash } from 'lucide-react';
 import { Checkbox } from "./ui/checkbox";
 import { Search } from 'lucide-react';
 import { CartItemCard } from "@/components/cart-item-card"
 import Link from "next/link";
-import { CartItemCard2 } from "./cart-item-card-2";
+import useCart from "@/lib/store";
+import toast from "react-hot-toast";
+
 
 const CartItems = () => {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true)
+    }, [])
+
+    const cart = useCart()
+
+    if (!isMounted) {
+        return null;
+    }
+
+    const onRemove = (id: string) => {
+        cart.removeItem(id);
+        toast.success("Item removed from cart");
+    }
+
+    const onClearCart = () => {
+        cart.removeAll();
+        toast.success("Cart cleared");
+    }
     return (
         <div className="px-[23px] lg:px-[75px] mt-[36px] ">
             {/* home to cart */}
@@ -22,7 +48,7 @@ const CartItems = () => {
             {/*  */}
             <div className="flex flex-col lg:hidden mt-[30px] gap-y-3 mb-[7px]">
                 <p className="font-openSans font-semibold  text-[12px] leading-[16px] " >CART SUMMARY</p>
-                <p className="font-openSans font-semibold  text-[12px] leading-[16px] text-[#9B9CA1]" >Cart (4)</p>
+                <p className="font-openSans font-semibold  text-[12px] leading-[16px] text-[#9B9CA1]" >Cart ({cart.items.length})</p>
             </div>
             {/* select all */}
             <div className="hidden lg:flex items-center justify-between w-[808px] mt-[26px] ">
@@ -34,7 +60,7 @@ const CartItems = () => {
 
                     <div className="flex items-center gap-x-2 text-[#D48CAF] ">
                         <Trash className="w-[14px] h-[18px] " />
-                        <p className="font-openSans font-semibold text-[18px] text-[#E2B2C9] leading-[25px] ">Delete</p>
+                        <p onClick={onClearCart} className="font-openSans font-semibold text-[18px] text-[#E2B2C9] hover:text-[#bc84b2] hover:cursor-pointer leading-[25px] ">Delete</p>
                     </div>
                 </div>
             </div>
@@ -44,52 +70,44 @@ const CartItems = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div className="col-span-1 lg:col-span-2">
                         <div className="w-full flex flex-col gap-y-6">
-                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
-                                <Checkbox className="border-black" />
-                                <CartItemCard
-                                    title="Skinluxe Glow Cream XG"
-                                    price="52,860"
-                                    unitsleft="3"
-                                    imgstring="Rectangle 120"
-                                    category="Body Oil"
-                                />
+
+                            <div className="flex items-center" >
+                                {cart.items.length === 0 && <p className="text-neutral-500">There are no items currently in your cart </p>}
+                                <ul>
+                                    {cart.items.map((item) => (
+                                        <div key={item.id} className="flex items-center px-1 md:px-2  gap-x-2 md:gap-x-4 w-full ">
+                                            <Checkbox className="border-black" />
+
+                                            <CartItemCard
+                                                id={item.id}
+                                                title={`${item.title}`}
+                                                price={`${item.price}`}
+                                                unitsleft="3"
+                                                imgstring={item.imageString}
+                                            />
+                                            <div onClick={() => onRemove(item.id)} className="hidden md:flex gap-x-2 text-[#D48CAF] hover:cursor-pointer hover:text-[#D3B1A2]  ">
+                                                <Trash className="w-[14px] h-[18px] " />
+                                                <p className="font-openSans font-semibold text-[12px] text-[#E2B2C9] leading-[25px] ">Remove from cart</p>
+                                            </div>
+                                        </div>
+
+                                    ))}
+                                </ul>
+
+
                             </div>
-                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
-                                <Checkbox className="border-black" />
-                                <CartItemCard2
-                                    title="Skin Este Glow"
-                                    price="86,780"
-                                    imgstring="image_102"
-                                    category="Moisturizer"
-                                />
-                            </div>
-                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
-                                <Checkbox className="border-black" />
-                                <CartItemCard
-                                    title="Sefera Mentius Oil"
-                                    price="88,000"
-                                    unitsleft="3"
-                                    imgstring="image_115"
-                                    category="Body Oil"
-                                />
-                            </div>
-                            <div className="flex items-center px-1 md:px-2 gap-x-2 md:gap-x-4 border border-[#B4B4B4]/20 ">
-                                <Checkbox className="border-black" />
-                                <CartItemCard2
-                                    title="Red Blissause Oil"
-                                    price="76,000"
-                                    imgstring="image 114"
-                                    category="Natural"
-                                />
-                            </div>
+
                         </div>
                     </div>
+
+
+
                     <div className="col-span-1 border-t md:border-t-0 md:border-l-2 border-[#B4B4B470] mt-6 lg:mt-0">
                         <div className="flex flex-col justify-start pl-4 md:pl-12 text-black font-openSans">
                             <p className="font-openSans font-bold text-[24px] md:text-[28px] leading-[34px] md:leading-[39px] flex">Order Summary</p>
                             <div className="mt-4 md:mt-6 flex flex-col gap-y-3 md:gap-y-4">
                                 <div className="w-full flex justify-between font-openSans text-[16px] md:text-[20px] leading-[22px] md:leading-[28px]">
-                                    <p>Sub Total (4 Items)</p>
+                                    <p>Sub Total ({cart.items.length} Items)</p>
                                     <p className="font-semibold text-[#868686]">N 211,440</p>
                                 </div>
                                 <div className="w-full flex justify-between font-openSans text-[16px] md:text-[20px] leading-[22px] md:leading-[28px]">
