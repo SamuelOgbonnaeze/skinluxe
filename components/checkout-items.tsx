@@ -5,14 +5,17 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import PaymentOptions from "./payment-options";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import useCart from "@/lib/store";
 
 
 
 const CheckoutItem = () => {
     const router = useRouter();
+    const cart= useCart()
 
     const handlePayment = () => {
         toast.success("Payment Successful");
+        cart.removeAll();
         router.push("/")
     };
 
