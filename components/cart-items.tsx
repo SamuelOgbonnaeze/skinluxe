@@ -19,15 +19,9 @@ const CartItems = () => {
     }, [])
 
     const cart = useCart()
-    console.log(cart.items)
 
     if (!isMounted) {
         return null;
-    }
-
-    const onRemove = (id: string) => {
-        cart.removeItem(id);
-        toast.success("Item removed from cart");
     }
 
     const onClearCart = () => {
@@ -61,7 +55,7 @@ const CartItems = () => {
 
                     <div className="flex items-center gap-x-2 text-[#D48CAF] ">
                         <Trash className="w-[14px] h-[18px] " />
-                        <p onClick={onClearCart} className="font-openSans font-semibold text-[18px] text-[#E2B2C9] hover:text-[#bc84b2] hover:cursor-pointer leading-[25px] ">Delete</p>
+                        <p onClick={onClearCart} className="font-openSans font-semibold text-[18px] text-[#E2B2C9] hover:text-[#bc84b2] hover:cursor-pointer leading-[25px] ">Clear cart</p>
                     </div>
                 </div>
             </div>
@@ -86,10 +80,7 @@ const CartItems = () => {
                                                 unitsleft="3"
                                                 imgstring={item.imageString}
                                             />
-                                            <div onClick={() => onRemove(item.id)} className="hidden md:flex gap-x-2 text-[#D48CAF] hover:cursor-pointer hover:text-[#D3B1A2]  ">
-                                                <Trash className="w-[14px] h-[18px] " />
-                                                <p className="font-openSans font-semibold text-[12px] text-[#E2B2C9] leading-[25px] ">Remove from cart</p>
-                                            </div>
+                                          
                                         </div>
 
                                     ))}
