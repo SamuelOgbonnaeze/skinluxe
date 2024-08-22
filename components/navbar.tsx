@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ShoppingCart } from 'lucide-react';
-import useCartStore from "@/lib/store";
+import useCart from "@/lib/store";
 
 const Navbar = () => {
 
-    const cart = useCartStore((state) => state.items);
+    const cart = useCart()
 
     return (
         <div className="w-full py-[29px] px-[30px] lg:px-[72px] border-b border-[#DFDFDF] ">
@@ -57,7 +57,7 @@ const Navbar = () => {
                     <Link href="/cart">
                         <div className="relative flex group px-2">
                             <ShoppingCart className="w-[24px] h-[24px] text-[#D3B1C2] group-hover:text-[#720439]" />
-                            <p className="absolute text-[16px] text-[#D3B1C2] -top-2 -right-1 group-hover:text-[#720439] ">{cart.length}</p>
+                            <p className="absolute text-[16px] text-[#D3B1C2] -top-2 -right-1 group-hover:text-[#720439] ">{cart.items.length}</p>
                         </div>
                     </Link>
                     <div className="flex items-center justify-between gap-x-1">

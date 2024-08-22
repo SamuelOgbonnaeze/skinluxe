@@ -6,9 +6,9 @@ import { persist, createJSONStorage } from "zustand/middleware";
 type Product = {
   id: string;
   title: string;
-  price: number;
+  price: string;
   supplier: string;
-  reviewno: number | null;
+  reviewno: string | null;
   imageString: string;
 };
 

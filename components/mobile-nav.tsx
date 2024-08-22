@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,8 +7,12 @@ import NavMenu from "./nav-menu";
 import { Search } from "lucide-react";
 import { Input } from "./ui/input";
 import { ShoppingCart } from 'lucide-react';
+import Cart from "@/app/cart/page";
+import useCart from "@/lib/store";
 
 const MobileNav = () => {
+
+    const cart = useCart()
     return (
         <div className="w-full py-[29px] px-[20px] border-b border-[#DFDFDF] ">
             <div className="w-full flex items-center justify-between ">
@@ -28,7 +34,7 @@ const MobileNav = () => {
                     <Link href="/cart">
                     <div className="relative flex group px-2">
                             <ShoppingCart className="w-[16px] h-[16px] text-[#D3B1C2] group-hover:text-[#720439]" />
-                            <p className="absolute text-[12px] text-[#D3B1C2] -top-2 right-0 group-hover:text-[#720439] ">4</p>
+                            <p className="absolute text-[12px] text-[#D3B1C2] -top-2 right-0 group-hover:text-[#720439] ">{cart.items.length}</p>
                         </div>
                     </Link>
                     <div className="flex items-center justify-between gap-x-1">

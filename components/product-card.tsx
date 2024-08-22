@@ -32,7 +32,7 @@ export const ProductCard = ({ id, title, price, reviewno, supplier, imageString 
 
 
     const onAdd = () => {
-        const product = { id, title, price:Number(price), supplier, reviewno:Number(reviewno), imageString };
+        const product = { id, title, price, supplier, reviewno, imageString };
         addToCart(product);
     }
 

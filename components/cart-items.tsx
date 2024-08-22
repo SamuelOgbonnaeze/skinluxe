@@ -19,6 +19,7 @@ const CartItems = () => {
     }, [])
 
     const cart = useCart()
+    console.log(cart.items)
 
     if (!isMounted) {
         return null;
